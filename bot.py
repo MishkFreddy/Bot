@@ -1,3 +1,4 @@
+from settings import TG_TOKEN, TG_API_URL
 import random
 import string
 from telegram import Update
@@ -18,7 +19,7 @@ def generate_handler(update: Update, context: CallbackContext) -> None:
 # Главная функция
 def main():
     # Токен вашего бота
-    updater = Updater("", use_context=True)
+    updater = Updater(TG_TOKEN, TG_API_URL, use_context=True)
 
     # Получаем диспетчер для регистрации обработчиков
     dp = updater.dispatcher
